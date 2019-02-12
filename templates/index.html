@@ -1,0 +1,269 @@
+<html>
+<head>
+<title>Lewen, Guo</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ url_for('static',filename='my_css.css') }}">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+<header>
+<div class="container">
+  <ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link btn my_btn" href="#" role="button">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn my_btn" href="#about" role="button">About me</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn my_btn" href="#experience" role="button">Experience</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn my_btn" href="#extra" role="button">Extra</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn my_btn" href='#contact' role="button">Contact</a>
+  </li>
+</ul>
+</div>
+</header>
+
+<section class="banner">
+  <div class="banner-layer">
+  <div class="container">
+    <div class="row">
+      <div class="description">
+        <h3>Welcome to My Personal Page<h3>
+        <h3>My Name is</h2>
+        <h2>Lewen, Guo</h2>
+        <h4>Born in Nanchang, Capital City of Jiangxi, China</h3>
+        <h4>Currently working as a programmer in Tokyo, Japan</h4>
+        <p> <p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-2">
+        <button type="button" class="btn my_btn" data-toggle="modal" data-target="#exampleModal">
+        About Me
+        </button>
+      </div>
+      <div class="col-3">
+        <button type="button" class="btn my_btn" data-toggle="modal" data-target="#exampleModal11">
+        Contact Me
+        </button>
+        <br>
+        <br>
+        <br>
+      </div>
+
+  </div>
+  </div>
+
+</section>
+<section id="about">
+  <h2>About Me</h2>
+  <div class="container">
+    <div class="row">
+    <div class="col-4">
+
+      <h3>My name is Lewen, Guo</h3>
+      <p>Born in Nanchang, Capital City of Jiangxi, China. Studied in Huazhong
+        University of Science and Technology. Got a Master of Science in Finance
+        in Waseda. Currently Working as a programmer in Tokyo, Japan. Interested in finance-related quantitative research.
+      </p>
+    </div>
+
+    <div class="col-4">
+      <p>Here should be a image to display</p>
+    </div>
+
+    <div class="col-4">
+      <p>I would like to </p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+<section id="experience">
+
+ <h2>Experience</h2>
+
+ <div class="container">
+ <div class="row">
+
+   <div class="col-3">
+
+ <div class="card mb-5">
+
+  <img src="{{url_for('static', filename='images/nanchang_foreign_language.jpg')}}" class="card-img-top" alt="...">
+  <div class="card-body text-secondary">
+    <h5 class="card-title">Nanchang Foreign Languages School</h5>
+    <p class="card-text">I studied at NFLS for six years (both middle and high schools), which is one of the best schools in Nanchang.
+      At least, I laid relative good foundations in English language among my peers. </p>
+    <p class="card-text"><small class="text-muted">uplated</small></p>
+  </div>
+</div>
+</div>
+
+
+ <div class="col-3">
+
+<div class="card mb-5">
+<img src="{{url_for('static', filename='images/aoikaze.png')}}" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">Huazhong University of Science and Technology/</h5>
+  <p class="card-text">College life in <a href="http://english.hust.edu.cn/">HUST</a> is two-fold. To be honest, I didn't learn too much useful skills
+  which may be advantegoues for me to find a decent job.
+  Just as anyone in this world who has received higher education, 4-Year College life is something that evokes the inner philosophy of a man in his early 20's.
+  The 4-year college teaches me, though not completely, but at least a sense of how this world works. <br>
+  I participated in one of largest student association <a href="https://aoikaze.moe/"> Aoikaze Anime Association</a> where
+  I made a lot of friends there. As a team we had arranged several ACG-related events which thousands of fans joined our events. unfortunately, two of
+  my regrets when I was the president of this association are that we failed to hold our events in the famous venue -<a href="https://baike.baidu.com/item/光谷体育馆">Optics Valley Gymnasium</a>
+  and we failed to issue our own Asscoiation Journal. I hope that my successors can fulfill these two tasks in near future.
+</p>
+  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+</div>
+</div>
+
+
+
+
+</div>
+
+
+<div class="col-3">
+
+<div class="card mb-3">
+<img src="images/waseda.png" class="card-img-top" alt="...">
+<div class="card-body">
+ <h5 class="card-title">Card title</h5>
+ <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+ <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+</div>
+</div>
+</div>
+
+<div class="col-3">
+
+<div class="card mb-3">
+<img src="images/hyas.png" class="card-img-top" alt="...">
+<div class="card-body">
+ <h5 class="card-title">Card title</h5>
+ <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+ <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="extra">
+
+<h2>"Full-time" OSU Player in 2010.5-2012.3 Best Ranking 1408.<h2>
+<h2> Dota2 Player, Legend 1, New Season.<h2>
+
+
+
+</section>
+
+
+
+
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">More About Me</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3>My name is Lewen, Guo</h3>
+        <p>I was born in <a href='https://en.wikipedia.org/wiki/Nanchang'>Nanchang</a>,
+          where I had a fulfilling 18-year early life before I started my 4-year college
+          life in <a href='http://english.hust.edu.cn/'>Huazhong University of Science and Technology</a>.
+          Life in my undergraduate was kind of two-fold. On one hand, unfortunately I failed to enter into
+          engineering schools to study any kind of "easy-to-get-a-job" major. However, on the other hand, I
+          was able to invest more time on what I am interested in.
+          <br>
+          If summarized my 4-year college life in one sentence, I would say "technically no progress but mentally more matured".
+          I endeavoured to pursue a "decent" job in China. However, it seems that employers in mainland are fond of computer geeks
+          but not candidates with potentials.
+          <br>
+          I made a decision to move. The reason that I chose to come to Japan lies in both subjective choices and objective facts.
+          As I participated in Doujin event(<a href='http://www.comiai.com/'>ComiAi</a> ) in Wuhan, I became immersed in this industry
+          where originated from Japan(<a href='https://www.comiket.co.jp/'>ComiKet</a>). The objective facts are that I de
+
+
+        </p>
+      </div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+<button type="button" class="btn btn-primary">Save changes</button>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="modal fade" id="exampleModal11" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel11" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel11">Contact Me</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+<form>
+  <div class="form-group row">
+    <label class="col-2" for="input1"><p>Name</p></label>
+    <input class="col-8 form-control" type="text" placeholder="Your Name">
+  </div>
+  <div class="form-group row">
+    <label class="col-2" for="input1"><p>Title</p></label>
+    <input class="col-8 form-control" type="text" placeholder="Inquiry Title">
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2" for="exampleFormControlInput1"><p>E-mail</p></label>
+    <input type="email" class="col-8 form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2" for="exampleFormControlTextarea1"><p>Example textarea</p></label>
+    <textarea class="col-8 form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write anything that want to share with me"></textarea>
+  </div>
+</form>
+<div class="modal-footer">
+<button type="button" class="btn btn-primary col-6">Submit</button>
+<button type="button" class="btn btn-secondary col-6" data-dismiss="modal">Close</button>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</body>
+</html>
