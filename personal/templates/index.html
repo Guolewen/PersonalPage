@@ -1,0 +1,468 @@
+{% from "_render_field.html" import render_field %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Lewen, Guo</title>
+<link rel="stylesheet" href="{{ url_for('static',filename='my_css.css') }}">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+<header>
+<div class="container">
+  <ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link btn btn-primary" href="#" role="button">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn btn-primary" href="#about" role="button">About me</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn btn-primary" href="#experience" role="button">Experience</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn btn-primary" href="#research" role="button">Research</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link btn btn-primary" href="#extra" role="button">Extra</a>
+  </li>
+  <li class="nav-item">
+    <button type="button" class="nav-link btn btn-primary" data-toggle="modal" data-target="#exampleModal11">
+    Contact</button>
+  </li>
+</ul>
+</div>
+</header>
+
+<section class="banner">
+  <div class="banner-layer">
+  <div class="container">
+    <div class="row">
+      <div class="description">
+        <h3>Welcome to My Personal Page<h3>
+        <h3>My Name is</h2>
+        <h2>Lewen, Guo</h2>
+        <h4>Born in Nanchang, Capital City of Jiangxi, China</h3>
+        <h4>Currently working as a programmer in Tokyo, Japan</h4>
+        <h4><span style="font-weight: bold">Looking for PhD programme in year 2019</span></h4>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-2">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        About Me
+        </button>
+      </div>
+      <div class="col-3">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal11">
+        Contact Me
+        </button>
+        <br>
+        <br>
+        <br>
+      </div>
+
+  </div>
+  </div>
+
+</section>
+<section id="about">
+  <h2>About Me</h2>
+  <div class="container">
+    <div class="row">
+    <div class="col-4">
+
+      <h3>My name is Lewen, Guo</h3>
+      <p>Born in Nanchang, Capital City of Jiangxi, China. Studied in Huazhong
+        University of Science and Technology. Got a Master of Science in Finance
+        in <a href="https://www.waseda.jp/fcom/wbs/en" target="_blank">Waseda Business School</a>.
+        Currently Working as a programmer in <a href="https://www.hyas.co.jp/" target="_blank">HyAS&Co.</a> Tokyo, Japan.
+        Interested in finance-related quantitative research.
+      </p>
+    </div>
+
+    <div class="col-4 text-center">
+      <p>Here should be a image to display</p>
+      <a href="{{ url_for('download_cv')}}", target="_blank"><button class="btn btn-primary">Download my cv</button></a>
+    </div>
+
+    <div class="col-4">
+      <p>I would like to </p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+<section id="experience">
+
+ <h2>Experience</h2>
+
+ <div class="container">
+ <div class="row">
+
+   <div class="col-3">
+
+ <div class="card mb-5">
+
+  <img src="{{url_for('static', filename='images/nanchang_foreign_language.jpg')}}" class="card-img-top" alt="...">
+  <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#NFLS">Nanchang Foreign Languages School</button>
+  <div class="card-body text-secondary">
+    <p class="card-text"><small class="text-muted">Updated at 2019/03/16</small></p>
+  </div>
+</div>
+</div>
+
+ <div class="col-3">
+
+<div class="card mb-5">
+<img src="{{url_for('static', filename='images/aoikaze.png')}}" class="card-img-top" alt="...">
+<button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#HUST">Huazhong University of Science and Technology</button>
+<div class="card-body">
+  <p class="card-text"><small class="text-muted">Updated at 2019/03/16</small></p>
+</div>
+</div>
+</div>
+
+
+<div class="col-3">
+
+<div class="card mb-3">
+<img src="{{url_for('static', filename='images/waseda.png')}}" class="card-img-top" alt="...">
+<button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#Waseda">Waseda Business School, Waseda University</button>
+<div class="card-body">
+ <p class="card-text"><small class="text-muted">Updated at 2019/03/16</small></p>
+</div>
+</div>
+</div>
+
+<div class="col-3">
+
+<div class="card mb-3">
+<img src="{{url_for('static', filename='images/hyas1.png')}}" class="card-img-top" alt="...">
+<button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#hyas">HyAs & Co.</button>
+<div class="card-body">
+ <p class="card-text"><small class="text-muted">Updated at 2019/03/16</small></p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="research">
+  <h2>Research</h2>
+  <div class="container">
+  <div class="list-group">
+
+  <button type="button" data-toggle="collapse" data-target="#Research1" class="list-group-item list-group-item-action list-group-item-primary">Effects of Serial Position on Stock Liquidity: Evidence from Japanese REIT Markets. Working Paper. Presented
+at Asian Real Estate Society, Vietnam Symposium in Banking and Finance, and Paris Financial Management Conference.</button>
+  <button  type="button" data-toggle="collapse" data-target="#Research2" class="list-group-item list-group-item-action list-group-item-primary">Research B</a>
+  <button type="button" class="list-group-item list-group-item-action list-group-item-success">Research C</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div id="Research1" class="collapse">
+  <div class="container research_lists">
+
+    <div class="row">
+      <div class="col-2">
+    <div class="list-group" id="myList" role="tablist">
+  <a class="list-group-item list-group-item-action active" data-toggle="list" href="#Title" role="tab">Title</a>
+  <a class="list-group-item list-group-item-action" data-toggle="list" href="#Authors" role="tab">Authors</a>
+  <a class="list-group-item list-group-item-action" data-toggle="list" href="#Abstract" role="tab">Abstract</a>
+  <a class="list-group-item list-group-item-action" data-toggle="list" href="#Link" role="tab">Link</a>
+  <a class="list-group-item list-group-item-action" data-toggle="list" href="#Hightlights" role="tab">Highlights</a>
+</div>
+</div>
+
+<!-- Tab panes -->
+<div class="col-10">
+<div class="tab-content">
+  <div class="tab-pane fade show active" id="Title" role="tabpanel"><h2>Effects of Serial Position on Stock Liquidity: Evidence from Japanese REIT Markets</h2></div>
+  <div class="tab-pane fade" id="Authors" role="tabpanel">
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th scope="col">Author</th>
+          <th scope="col">Affiliation</th>
+          <th scope="col">Contact</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>William Cheung</td>
+          <td>Waseda Business School & Institute For Business and Finance, Waseda University</td>
+          <td> 1-6-1 Nishi Waseda, Shinjuku-ku, Tokyo, Japan</td>
+          <td>william.c@aoni.waseda.jp</td>
+        </tr>
+        <tr>
+          <td><span style="font-weight: bold;">Lewen, Guo</span></td>
+          <td>Independent Researcher</td>
+          <td></td>
+          <td>guolewen1994@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Yuichiro Kawaguchi</td>
+          <td>Graduate School of Business and Finance</td>
+          <td></td>
+          <td>ykawaguchi@waseda.jp</td>
+        </tr>
+        <tr>
+          <td>Stephan Unger</td>
+          <td>Department of Economics and Business Saint Anselm College</td>
+          <td>100 St. Anselm Drive, 03104 Manchester, New Hampshire, USA</td>
+          <td>sunger@anselm.edu</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  <div class="tab-pane fade" id="Abstract" role="tabpanel">
+    <p>
+      An important feature of public Real Estate Investment Trusts (REITs) is that they enhance the liquidity of the underlying illiquid property markets. Surprisingly REITs in Japan are among the most illiquid stocks in the Tokyo Stock Exchange. We examine an important but neglected factors of market liquidity – serial-position effects – in Japanese REIT (J-REITs) markets. Researches in social science suggest that serial-position effects exist extensively but less evidence are documented in financial markets, and much rarer in real estate finance literature. Given the relative homogeneity of investment and regulatory constraints faced by Japanese REITs, we argue that J-REITs provide a controlled environment to identify serial-position effects in a financial market. We find that stocks of J-REITs with their company names in higher "Katakana" order are significantly more liquid-lower price impact and higher turnover - than those with names in the lower order. We further document a non-linear, two-dimensional position effects using the nested linguistic complexity of Japanese. Our results cannot be fully explained by traditional factors of stock liquidity.
+    </p>
+  </div>
+  <div class="tab-pane fade" id="Link" role="tabpanel"><a href="#" class="btn btn-primary" role="button">Get the paper</a></div>
+  <div class="tab-pane fade" id="Hightlights" role="tabpanel">This should some figures</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="Research2" class="collapse">
+  <div class="container research_lists">
+
+    <div class="row">
+      <div class="col-4">
+    <div class="list-group" id="myList1" role="tablist">
+  <a class="list-group-item list-group-item-action active" data-toggle="list" href="#Title1" role="tab">Title</a>
+  <a class="list-group-item list-group-item-action" data-toggle="list" href="#Authors1" role="tab">Authors</a>
+  <a class="list-group-item list-group-item-action" data-toggle="list" href="#Abstract1" role="tab">Abstract</a>
+  <a class="list-group-item list-group-item-action" data-toggle="list" href="#Link1" role="tab">Link</a>
+  <a class="list-group-item list-group-item-action" data-toggle="list" href="#Hightlights1" role="tab">Highlights</a>
+</div>
+</div>
+
+<!-- Tab panes -->
+<div class="col-8">
+<div class="tab-content">
+  <div class="tab-pane fade show active" id="Title1" role="tabpanel">a</div>
+  <div class="tab-pane fade" id="Authors1" role="tabpanel">b</div>
+  <div class="tab-pane fade" id="Abstract1" role="tabpanel">c</div>
+  <div class="tab-pane fade" id="Link1" role="tabpanel">d</div>
+  <div class="tab-pane fade" id="Hightlights1" role="tabpanel">This should some figures</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</section>
+
+
+
+
+<section id="extra">
+
+
+
+
+
+</section>
+
+
+
+
+
+
+<section id="modal">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">More About Me</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3>My name is Lewen, Guo</h3>
+        <p>I was born in <a href='https://en.wikipedia.org/wiki/Nanchang' target="_blank">Nanchang</a>,
+          where I had a fulfilling 18-year early life before I started my 4-year college
+          life in <a href='http://english.hust.edu.cn/' target="_blank">Huazhong University of Science and Technology</a>.
+          Life in my undergraduate was kind of two-fold. On one hand, unfortunately I failed to enter into
+          engineering schools to study any kind of "easy-to-get-a-job" major. However, on the other hand, I
+          was able to invest more time on what I am interested in.
+          <br>
+          If summarized my 4-year college life in one sentence, I would say "technically no progress but mentally more matured".
+          I endeavoured to pursue a "decent" job in China. However, it seems that employers in mainland are fond of computer geeks
+          but not candidates with potentials.
+          <br>
+          I made a decision to move. Based on lots of reasons I decided to pursue a higher degree in <a href="https://www.waseda.jp/top/en" target="_blank"> Waseda University </a>, Tokyo, Japan.
+          During my master programme, I was lucky enough to have the opportunity to work as TA and RA in <a href="https://www.waseda.jp/fcom/wbs/en" target="_blank"> Waseda Business School</a>
+          and was writing Python and R programs for some research projects.
+          <br>
+          After my graduation, I was recommended by my master theis superviser Prof. <a href="https://www.waseda.jp/fcom/wbs/faculty-en/6093" target="_blank">Kawaguchi Yuichiro</a>
+          to join one of fast-growing listed real estate consulting firm - <a href="https://www.hyas.co.jp/" target="_blank">HyAS&Co</a>.
+          I was involved in developing a real estate service system for small real estate brokers.
+        </p>
+      </div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="modal fade bd-example-modal-lg" id="NFLS" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Nanchang Foreign Language School</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>I studied at NFLS for six years (both middle and high schools), which is one of the best schools in Nanchang.
+            At least, I laid relative good foundations in English language among my peers.</p>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="Waseda" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Waseda University</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>I got a Master of Science in Finance on 2018 Sept. at <a href="https://www.waseda.jp/fcom/wbs/en" target="_blank"> Waseda Business School</a>. During my two-years studies, I worked
+          for Prof. <a href="https://www.waseda.jp/fcom/wbs/faculty-en/6093" target="_blank">Kawaguchi Yuichiro</a> and Prof. <a href="https://www.waseda.jp/fcom/wbs/faculty-en/6076">CHEUNG Ming Yan William</a>
+          as TA and RA. I wrote Python and R programs for several research projects and also involved in some writing parts using <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span></p>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="hyas" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">HyAs & CO.</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>After my graduation from Waseda University, I was recommended by my master thesis superviser to join one of the fast-growing real estate consulting firm
+          <a href="https://www.hyas.co.jp/" target="_blank">HyAS&Co</a>. As a member in R&D group, I was involved in developing real estate information system (REIDARS)
+          I was responsible for developing both backend python scripts and front-end JavaScript scripts for some key functions and pages</p>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade bd-example-modal-lg" id="HUST" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Huazhong University of Science and Technology</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p >College life in <a href="http://english.hust.edu.cn/" target="_blank">HUST</a> is two-fold. To be honest, I didn't learn too much useful skills
+          which may be advantegoues for me to find a decent job.
+          Just as anyone in this world who has received higher education, 4-Year College life is something that evokes the inner philosophy of a man in his early 20's.
+          The 4-year college teaches me, though not completely, but at least a sense of how this world works. <br>
+          I participated in one of largest student association <a href="https://aoikaze.moe/" target="_blank"> Aoikaze Anime Association</a> where
+          I made a lot of friends there. As a team we had arranged several ACG-related events which thousands of fans joined our events. unfortunately, two of
+          my regrets when I was the president of this association are that we failed to hold our events in the famous venue -<a href="https://baike.baidu.com/item/光谷体育馆">Optics Valley Gymnasium</a>
+          and we failed to issue our own Asscoiation Journal. I hope that my successors can fulfill these two tasks in near future.
+        </p>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="modal fade" id="exampleModal11" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel11" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel11">Contact Me</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+<form action="{{url_for('hello_world')}}" method="post">
+  {{ form.csrf_token }}
+  {{ render_field(form.name, placeholder=form.name.label.text) }}
+  {{ render_field(form.title, placeholder=form.title.label.text) }}
+  {{ render_field(form.email, placeholder=form.email.label.text) }}
+  {{ render_field(form.content, placeholder=form.content.label.text)}}
+
+<div class="modal-footer">
+<button type="submit" class="btn btn-primary col-6">Submit</button>
+<button type="button" class="btn btn-secondary col-6" data-dismiss="modal">Close</button>
+
+</div>
+
+</form>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</section>
+
+
+
+</body>
+</html>
