@@ -4,8 +4,7 @@ header {
     width: 100%;
 }
 section{
-  background-color: #e9ecef
-
+  background-color: #ffffff
 }
 .banner{
 background: url("images/DSC00272.jpg");
@@ -25,20 +24,47 @@ color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 38px; font-weight:
 .banner h4{
   color: #ffffff; font-family: 'Lucida Sans', Arial, sans-serif; font-size: 16px; line-height: 26px; margin: 0;
 }
-.my_btn {
-    color: #ffffff;
-    border: 1px solid #fff;
-    background-color:#191E6B;
-    border-color: #ffffff; /*set the color you want here*/
-}
-.my_btn:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
-    color: #ffffff;
-    background-color: #131856;
-    border-color: #131856; /*set the color you want here*/
+
+.btn-primary, .btn-primary:active, .btn-primary:visited {
+    background-color: #131856  !important;
+    border-color: #131856 !important;
 }
 
+.btn-primary.focus, .btn-primary:focus{
+      box-shadow: 0 0 0 0.2rem #1f2687 !important;
+}
+
+.btn-primary:hover{
+  background-color: #191f72 !important;
+}
+
+.carousel-control-prev-icon {
+
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='cornflowerblue' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+
+}
+
+.carousel-control-next-icon {
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='cornflowerblue' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+.list-group-item-action{
+width: 100%;
+color: #ffffff !important;
+text-align: inherit;
+}
+
+
+.research_lists{
+  background-color: #ffffff
+}
 .description{
   padding: 16em 0em 0em;
+}
+.latex sup {
+  font-size: 0.85em;
+  vertical-align: 0.15em;
+  margin-left: -0.36em;
+  margin-right: -0.15em;
 }
 h1 { color: #111; font-family: 'Open Sans Condensed', sans-serif; font-size: 64px; font-weight: 700; line-height: 64px; margin: 0 0 0; padding: 20px 30px; text-align: center; text-transform: uppercase; }
 
@@ -46,7 +72,7 @@ h2 { color: #111; font-family: 'Open Sans Condensed', sans-serif; font-size: 48p
 
 p { color: #111; font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 28px; margin: 0 0 5px; }
 
-a { color: #990000; text-decoration: none; }
+section a { color: #990000; text-decoration: none; }
 
 a:hover { text-decoration: underline }
 
