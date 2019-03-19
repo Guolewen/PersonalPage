@@ -1,0 +1,113 @@
+header {
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+}
+section{
+  background-color: #ffffff
+}
+.banner{
+background: url("images/DSC00272.jpg");
+background-size: 60%;
+background-repeat: no-repeat;
+-webkit-background-size: cover;
+}
+.banner-layer{
+
+}
+.banner h2{
+color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 38px; font-weight: 800; line-height: 35px; margin: 0 0 24px;
+}
+.banner h3{
+  color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 30px; font-weight: 800; line-height: 36px; margin: 0 0 24px;
+}
+.banner h4{
+  color: #ffffff; font-family: 'Lucida Sans', Arial, sans-serif; font-size: 16px; line-height: 26px; margin: 0;
+}
+
+.btn-primary, .btn-primary:active, .btn-primary:visited {
+    background-color: #131856  !important;
+    border-color: #131856 !important;
+}
+
+.btn-primary.focus, .btn-primary:focus{
+      box-shadow: 0 0 0 0.2rem #1f2687 !important;
+}
+
+.btn-primary:hover{
+  background-color: #191f72 !important;
+}
+
+.carousel-control-prev-icon {
+
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='cornflowerblue' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+
+}
+
+.carousel-control-next-icon {
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='cornflowerblue' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-indicators .active {
+    background-color: #87cefa;
+}
+.carousel-indicators > li {
+  border-radius: 12px !important;
+   width: 12px !important;
+   height: 12px !important;
+   background-color: #404040 !important;
+}
+.modal-content {
+background-clip: border-box !important;
+border: none !important;
+}
+
+
+.list-group-item-action{
+width: 100%;
+color: #ffffff !important;
+text-align: inherit;
+}
+
+
+.research_lists{
+  background-color: #ffffff
+}
+.description{
+  padding: 16em 0em 0em;
+}
+.latex sup {
+  font-size: 0.85em;
+  vertical-align: 0.15em;
+  margin-left: -0.36em;
+  margin-right: -0.15em;
+}
+h1 { color: #111; font-family: 'Open Sans Condensed', sans-serif; font-size: 64px; font-weight: 700; line-height: 64px; margin: 0 0 0; padding: 20px 30px; text-align: center; text-transform: uppercase; }
+
+h2 { color: #111; font-family: "Comic Sans MS", cursive, sans-serif; font-size: 48px; font-weight: 700; line-height: 48px; margin: 0 0 24px; padding: 0 30px; text-align: center; }
+
+h3 { color: #111; font-family: "Arial Black", Gadget, sans-serif}
+
+p { color: #111; font-family: 'Open Sans', sans-serif; font-size: 16px; line-height: 28px; margin: 0 0 5px; }
+
+section a { color: #990000; text-decoration: none; }
+
+a:hover { text-decoration: underline }
+
+.date { color: #111; display: block; font-family: 'Open Sans', sans-serif; font-size: 16px; position: relative; text-align: center; z-index: 1; }
+
+.date:before { border-top: 1px solid #111; content: ""; position: absolute; top: 12px; left: 0; width: 100%; z-index: -1; }
+
+.author { color: #111; display: block; font-family: 'Open Sans', sans-serif; font-size: 16px; padding-bottom: 38px; position: relative; text-align: center; z-index: 1; }
+
+.author:before { border-top: 1px solid #111; content: ""; position: absolute; top: 12px; left: 0; width: 100%; z-index: -1; }
+
+.date span,
+
+.author span { background: #fdfdfd; padding: 0 10px; text-transform: uppercase; }
+
+.line { border-top: 1px solid #111; display: block; margin-top: 60px; padding-top: 50px; position: relative; }
+
+.read-more { -moz-border-radius: 50%; -moz-transition: all 0.2s ease-in-out; -webkit-border-radius: 50%; -webkit-transition: all 0.2s ease-in-out; background: #111; border-radius: 50%; border: 10px solid #fdfdfd; color: #fff; display: block; font-family: 'Open Sans', sans-serif; font-size: 14px; height: 80px; line-height: 80px; margin: -40px 0 0 -40px; position: absolute; bottom: 0px; left: 50%; text-align: center; text-transform: uppercase; width: 80px; }
+
+.read-more:hover { background: #990000; text-decoration: none; }
