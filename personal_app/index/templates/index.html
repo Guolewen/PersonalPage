@@ -93,7 +93,7 @@
         <h3>More About My Professional Experience</h3>
       </div>
       <h4>Click the button below to get my cv &#8595;</h4>
-      <a href="{{ url_for('download_cv')}}", target="_blank"><button class="btn btn-primary">Download My CV</button></a>
+      <a href="{{ url_for('index.download_cv')}}", target="_blank"><button class="btn btn-primary">Download My CV</button></a>
     </div>
 
     <div class="col-4">
@@ -513,12 +513,6 @@ at Asian Real Estate Society, Vietnam Symposium in Banking and Finance, and Pari
         </button>
       </div>
       <div class="modal-body">
-<form action="{{url_for('hello_world')}}" method="post">
-  {{ form.csrf_token }}
-  {{ render_field(form.name, placeholder=form.name.label.text) }}
-  {{ render_field(form.title, placeholder=form.title.label.text) }}
-  {{ render_field(form.email, placeholder=form.email.label.text) }}
-  {{ render_field(form.content, placeholder=form.content.label.text)}}
 
 <div class="modal-footer">
 <button type="submit" class="btn btn-primary col-6">Submit</button>
@@ -526,7 +520,6 @@ at Asian Real Estate Society, Vietnam Symposium in Banking and Finance, and Pari
 
 </div>
 
-</form>
 </div>
 </div>
 </div>
