@@ -1,14 +1,46 @@
-{% from "_render_field.html" import render_field %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <title>Lewen, Guo</title>
-<link rel="stylesheet" href="{{ url_for('static',filename='my_css.css') }}">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="{{ url_for('index.static',filename='my_css.css') }}">
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+$('#submit').click(function(e){
+  var form = $('#guest')
+  var data = {
+    name: $("#name").val(),
+    title: $("#title").val(),
+    email: $('#email').val(),
+    text: $('#text').val()
+  }
+  $.ajax({
+  type: form.attr('method'),
+  url: form.attr('action'),
+  data: form.serialize(),
+  success: function(){
+    $('#success').append("<div class='alert alert-success'><strong>Submit Success!</strong> Please Wait for My Response.</div>")
+    },
+  error: function(){
+    alert("Failed")
+    }
+  })
+})
+
+$('#close').click(function(e){
+  $('#success').empty()
+})
+
+})
+
+
+</script>
 </head>
 
 
@@ -32,7 +64,7 @@
     <a class="nav-link btn btn-primary" href="#extra" role="button">Extra</a>
   </li>
   <li class="nav-item">
-    <button type="button" class="nav-link btn btn-primary" data-toggle="modal" data-target="#exampleModal11">
+    <button type="button" class="nav-link btn btn-primary" data-toggle="modal" data-target="#contactme">
     Contact</button>
   </li>
 </ul>
@@ -60,7 +92,7 @@
         </button>
       </div>
       <div class="col-3">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal11">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactme">
         Contact Me
         </button>
         <br>
@@ -103,13 +135,13 @@
       <div class="container">
         <div class="row">
         <div class="col text-center">
-          <p><a href="https://www.linkedin.com/in/lewen-guo-a5b097119/" target="_blank"><img src="{{url_for('static', filename='images/Logo-2C-21px-TM.png')}}"></a>
+          <p><a href="https://www.linkedin.com/in/lewen-guo-a5b097119/" target="_blank"><img src="{{url_for('.static', filename='images/Logo-2C-21px-TM.png')}}"></a>
         </div>
         <div class="col text-center">
           <p>and</p>
         </div>
         <div class="col text-center">
-          <a href="https://github.com/Guolewen" target="_blank"><img src="{{url_for('static', filename='images/GitHub-Mark-32px.png')}}"></a></p>
+          <a href="https://github.com/Guolewen" target="_blank"><img src="{{url_for('.static', filename='images/GitHub-Mark-32px.png')}}"></a></p>
         </div>
       </div>
       <div class="row">
@@ -139,7 +171,7 @@
 
  <div class="card mb-5">
 
-  <img src="{{url_for('static', filename='images/nanchang_foreign_language.jpg')}}" class="card-img-top" alt="...">
+  <img src="{{url_for('.static', filename='images/nanchang_foreign_language.jpg')}}" class="card-img-top" alt="...">
   <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#NFLS">Nanchang Foreign Languages School</button>
   <div class="card-body text-secondary">
     <p class="card-text"><small class="text-muted">Updated at 2019/03/16</small></p>
@@ -150,7 +182,7 @@
  <div class="col-3">
 
 <div class="card mb-5">
-<img src="{{url_for('static', filename='images/aoikaze.png')}}" class="card-img-top" alt="...">
+<img src="{{url_for('.static', filename='images/aoikaze.png')}}" class="card-img-top" alt="...">
 <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#HUST">Huazhong University of Science and Technology</button>
 <div class="card-body">
   <p class="card-text"><small class="text-muted">Updated at 2019/03/16</small></p>
@@ -162,7 +194,7 @@
 <div class="col-3">
 
 <div class="card mb-3">
-<img src="{{url_for('static', filename='images/waseda.png')}}" class="card-img-top" alt="...">
+<img src="{{url_for('.static', filename='images/waseda.png')}}" class="card-img-top" alt="...">
 <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#Waseda">Waseda Business School, Waseda University</button>
 <div class="card-body">
  <p class="card-text"><small class="text-muted">Updated at 2019/03/16</small></p>
@@ -173,7 +205,7 @@
 <div class="col-3">
 
 <div class="card mb-3">
-<img src="{{url_for('static', filename='images/hyas1.png')}}" class="card-img-top" alt="...">
+<img src="{{url_for('.static', filename='images/hyas1.png')}}" class="card-img-top" alt="...">
 <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#hyas">HyAs & Co.</button>
 <div class="card-body">
  <p class="card-text"><small class="text-muted">Updated at 2019/03/16</small></p>
@@ -189,41 +221,35 @@
   <h2>Research</h2>
   <div class="container">
   <div class="list-group">
-
-  <button type="button" data-toggle="collapse" data-target="#Research1" class="btn btn-primary list-group-item list-group-item-action ">Effects of Serial Position on Stock Liquidity: Evidence from Japanese REIT Markets. Working Paper. Presented
-at Asian Real Estate Society, Vietnam Symposium in Banking and Finance, and Paris Financial Management Conference.</button>
-  <button  type="button" data-toggle="collapse" data-target="#Research2" class="btn btn-primary list-group-item list-group-item-action">Research B</a>
-
+  {% for research in research_data %}
+  <button type="button" data-toggle="collapse" data-target="#research{{research.research_id}}" class="btn btn-primary list-group-item list-group-item-action ">{{research.paperinfo}}</button>
+  {% endfor %}
   </div>
 </div>
 
 
-
-
-
-
-
-<div id="Research1" class="collapse">
+{% for research in research_data %}
+<div id="research{{research.research_id}}" class="collapse">
   <div class="container research_lists">
     <br>
     <div class="row">
       <div class="col-3">
     <div class="list-group" id="myList" role="tablist">
-  <a class="btn btn-primary list-group-item list-group-item-action active" data-toggle="list" href="#Title" role="tab">Title</a>
-  <a class="btn btn-primary list-group-item list-group-item-action" data-toggle="list" href="#Authors" role="tab">Authors</a>
-  <a class="btn btn-primary list-group-item list-group-item-action" data-toggle="list" href="#Abstract" role="tab">Abstract</a>
-  <a class="btn btn-primary list-group-item list-group-item-action" data-toggle="list" href="#Link" role="tab">Link</a>
-  <a class="btn btn-primary list-group-item list-group-item-action" data-toggle="list" href="#Hightlights" role="tab">Highlights</a>
+  <a class="btn btn-primary list-group-item list-group-item-action active" data-toggle="list" href="#Title{{research.research_id}}" role="tab">Title</a>
+  <a class="btn btn-primary list-group-item list-group-item-action" data-toggle="list" href="#Authors{{research.research_id}}" role="tab">Authors</a>
+  <a class="btn btn-primary list-group-item list-group-item-action" data-toggle="list" href="#Abstract{{research.research_id}}" role="tab">Abstract</a>
+  <a class="btn btn-primary list-group-item list-group-item-action" data-toggle="list" href="#Link{{research.research_id}}" role="tab">Link</a>
+  <a class="btn btn-primary list-group-item list-group-item-action" data-toggle="list" href="#Hightlights{{research.research_id}}" role="tab">Highlights</a>
 </div>
 </div>
 
 <!-- Tab panes -->
 <div class="col-9">
 <div class="tab-content">
-  <div class="tab-pane fade show active" id="Title" role="tabpanel">
-    <h3>Effects of Serial Position on Stock Liquidity: Evidence from Japanese REIT Markets</h3>
+  <div class="tab-pane fade show active" id="Title{{research.research_id}}" role="tabpanel">
+    <h3>{{research.title}}</h3>
   </div>
-  <div class="tab-pane fade" id="Authors" role="tabpanel">
+  <div class="tab-pane fade" id="Authors{{research.research_id}}" role="tabpanel">
     <table class="table table-sm">
       <thead>
         <tr>
@@ -234,81 +260,61 @@ at Asian Real Estate Society, Vietnam Symposium in Banking and Finance, and Pari
         </tr>
       </thead>
       <tbody>
+        {%for author in research.authors.author_list %}
         <tr>
-          <td>William Cheung</td>
-          <td>Waseda Business School & Institute For Business and Finance, Waseda University</td>
-          <td> 1-6-1 Nishi Waseda, Shinjuku-ku, Tokyo, Japan</td>
-          <td>william.c@aoni.waseda.jp</td>
+          <td>{{author.Author}}</td>
+          <td>{{author.Affiliation}}</td>
+          <td>{{author.Contact}}</td>
+          <td>{{author.Email}}</td>
         </tr>
-        <tr>
-          <td><span style="font-weight: bold;">Lewen, Guo</span></td>
-          <td>Independent Researcher</td>
-          <td></td>
-          <td>guolewen1994@gmail.com</td>
-        </tr>
-        <tr>
-          <td>Yuichiro Kawaguchi</td>
-          <td>Graduate School of Business and Finance</td>
-          <td></td>
-          <td>ykawaguchi@waseda.jp</td>
-        </tr>
-        <tr>
-          <td>Stephan Unger</td>
-          <td>Department of Economics and Business Saint Anselm College</td>
-          <td>100 St. Anselm Drive, 03104 Manchester, New Hampshire, USA</td>
-          <td>sunger@anselm.edu</td>
-        </tr>
+        {% endfor %}
       </tbody>
     </table>
     </div>
-  <div class="tab-pane fade" id="Abstract" role="tabpanel">
+  <div class="tab-pane fade" id="Abstract{{research.research_id}}" role="tabpanel">
     <p>
-      An important feature of public Real Estate Investment Trusts (REITs) is that they enhance the liquidity of the underlying illiquid property markets. Surprisingly REITs in Japan are among the most illiquid stocks in the Tokyo Stock Exchange. We examine an important but neglected factors of market liquidity – serial-position effects – in Japanese REIT (J-REITs) markets. Researches in social science suggest that serial-position effects exist extensively but less evidence are documented in financial markets, and much rarer in real estate finance literature. Given the relative homogeneity of investment and regulatory constraints faced by Japanese REITs, we argue that J-REITs provide a controlled environment to identify serial-position effects in a financial market. We find that stocks of J-REITs with their company names in higher "Katakana" order are significantly more liquid-lower price impact and higher turnover - than those with names in the lower order. We further document a non-linear, two-dimensional position effects using the nested linguistic complexity of Japanese. Our results cannot be fully explained by traditional factors of stock liquidity.
+      {{research.abstract}}
     </p>
   </div>
-  <div class="tab-pane fade" id="Link" role="tabpanel"><a href="#" class="btn btn-primary" role="button">Get the paper</a></div>
+  <div class="tab-pane fade" id="Link{{research.research_id}}" role="tabpanel"><a href="{{research.link}}" class="btn btn-primary" role="button">Get the paper</a></div>
 
 
 
-  <div class="tab-pane fade" id="Hightlights" role="tabpanel">
-    <div id="carouselExampleFade" class="carousel slide" data-ride="carousel">
+  <div class="tab-pane fade" id="Hightlights{{research.research_id}}" role="tabpanel">
+    <div id="carouselExampleFade{{research.research_id}}" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
-    <li data-target="#carouselExampleFade" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleFade" data-slide-to="1"></li>
-    <li data-target="#carouselExampleFade" data-slide-to="2"></li>
-    <li data-target="#carouselExampleFade" data-slide-to="3"></li>
+    {% for caption in research.highlights.caption %}
+        {% if loop.index0 == 0 %}
+          <li data-target="#carouselExampleFade{{research.research_id}}" data-slide-to="{{loop.index0}}" class="active"></li>
+        {% else %}
+          <li data-target="#carouselExampleFade{{research.research_id}}" data-slide-to="{{loop.index0}}"></li>
+        {% endif %}
+
+    {% endfor %}
   </ol>
-      <div class="carousel-inner container" style="width:600px; height: 500px !important;">
-        <div class="carousel-item active">
-          <div class="container">
-          <p>Number of Japanese REITs (in Blue) and Market Capitalization (in Red) Sample Year from 2013 to 2018.</p>
-          <img src="{{url_for('static', filename='images/j-reits.png')}}" style="width:500px; height: 400px" class="d-block w-100" alt="...">
-        </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-          <p>Comparisons of REITs Liquidity Across Other Thirty-Three Industries in Tokyo Stock Exchange.</p>
-          <img src="{{url_for('static', filename='images/INDUSTRIES.png')}}" class="img-fluid d-block w-100" alt="...">
-        </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-          <p>Cubic Spline Interpolation of Liquidity Measures (Left: Amihud; Right: Turnover) on Japanese Syllable Positions</p>
-          <img src="{{url_for('static', filename='images/3d_1209.png')}}" class="img-fluid d-block w-100" alt="...">
-        </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-            <p>Correlation Heapmap of Key Independent Variables</p>
-          <img src="{{url_for('static', filename='images/Corr.png')}}" class="img-fluid d-block w-100" alt="...">
+      <div class="carousel-inner container" >
+        {% for caption, figure_url in research.highlights.caption|zip(research.highlights.images_url) %}
+          {% if loop.index0==0 %}
+          <div class="carousel-item active">
+            <div class="container">
+              <p style="text-align: center">{{caption}}</p>
+              <img src="{{figure_url}}"  class="d-block w-100" alt="...">
+            </div>
           </div>
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+          {% else %}
+          <div class="carousel-item">
+            <div class="container">
+              <p style="text-align: center;">{{caption}}</p>
+              <img src="{{figure_url}}"  class="d-block w-100" alt="...">
+            </div>
+          </div>
+          {% endif %}
+        {% endfor %}
+      <a class="carousel-control-prev" href="#carouselExampleFade{{research.research_id}}" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+      <a class="carousel-control-next" href="#carouselExampleFade{{research.research_id}}" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
@@ -321,35 +327,8 @@ at Asian Real Estate Society, Vietnam Symposium in Banking and Finance, and Pari
 </div>
 </div>
 </div>
-
-<div id="Research2" class="collapse">
-  <div class="container research_lists">
-
-    <div class="row">
-      <div class="col-4">
-    <div class="list-group" id="myList1" role="tablist">
-  <a class="list-group-item list-group-item-action active" data-toggle="list" href="#Title1" role="tab">Title</a>
-  <a class="list-group-item list-group-item-action" data-toggle="list" href="#Authors1" role="tab">Authors</a>
-  <a class="list-group-item list-group-item-action" data-toggle="list" href="#Abstract1" role="tab">Abstract</a>
-  <a class="list-group-item list-group-item-action" data-toggle="list" href="#Link1" role="tab">Link</a>
-  <a class="list-group-item list-group-item-action" data-toggle="list" href="#Hightlights1" role="tab">Highlights</a>
 </div>
-</div>
-
-<!-- Tab panes -->
-<div class="col-8">
-<div class="tab-content">
-  <div class="tab-pane fade show active" id="Title1" role="tabpanel">a</div>
-  <div class="tab-pane fade" id="Authors1" role="tabpanel">b</div>
-  <div class="tab-pane fade" id="Abstract1" role="tabpanel">c</div>
-  <div class="tab-pane fade" id="Link1" role="tabpanel">d</div>
-  <div class="tab-pane fade" id="Hightlights1" role="tabpanel">This should some figures</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
+{% endfor %}
 
 </section>
 
@@ -503,7 +482,7 @@ at Asian Real Estate Society, Vietnam Symposium in Banking and Finance, and Pari
 
 
 
-<div class="modal fade" id="exampleModal11" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel11" aria-hidden="true">
+<div class="modal fade" id="contactme" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel11" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -512,14 +491,37 @@ at Asian Real Estate Society, Vietnam Symposium in Banking and Finance, and Pari
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <form id="guest" action="{{url_for('form.guest_form')}}" method="post">
       <div class="modal-body">
+        <div class="form-group row">
+          <label class="col-2" for="name"><p>Your Name</p></label>
+          <input name="name" id="name" class="form-control col-8" type="text" placeholder="Enter Your Name">
+        </div>
+        <div class="form-group row">
+          <label class="col-2" for="title"><p>Title</p></label>
+          <input name="title" id="title" class="form-control col-8" type="text" placeholder="Title">
+        </div>
+        <div class="form-group row">
+          <label class="col-2" for="email"><p>Your Email</p></label>
+          <input name="email" id="email" class="form-control col-8" type="text" placeholder="you_email@example.com">
+        </div>
+        <div class="form-group row">
+          <label class="col-2" for="content"><p>Contents</p></label>
+          <textarea name="content" class="col-8 form-control" id="content" placeholder="Contents"></textarea>
+        </div>
+      </div>
 
-<div class="modal-footer">
-<button type="submit" class="btn btn-primary col-6">Submit</button>
-<button type="button" class="btn btn-secondary col-6" data-dismiss="modal">Close</button>
 
+<div class="modal-footer container">
+
+    <button type="button" id="submit" class="btn btn-primary col-6">Submit</button>
+    <button type="button" id="close" class="btn btn-secondary col-6" data-dismiss="modal">Close</button>
 </div>
+  <div id="success">
 
+  </div>
+
+</form>
 </div>
 </div>
 </div>
@@ -528,7 +530,6 @@ at Asian Real Estate Society, Vietnam Symposium in Banking and Finance, and Pari
 
 </div>
 </section>
-
 
 
 </body>

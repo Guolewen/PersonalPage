@@ -1,5 +1,5 @@
-from .personal_app import create_app
-from .config import DevConfig
+from personal_app import create_app
+from config import DevConfig
 
 
 app = create_app(DevConfig)
