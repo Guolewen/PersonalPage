@@ -7,7 +7,7 @@ section{
   background-color: #ffffff
 }
 .banner{
-background: url("/images/DSC00272.png");
+background: url("https://storage.googleapis.com/lewenguo_testbucket/static/DSC00272.JPG");
 background-size: 60%;
 background-repeat: no-repeat;
 -webkit-background-size: cover;
