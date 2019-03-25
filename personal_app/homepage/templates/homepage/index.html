@@ -23,7 +23,8 @@ $('#submit').click(function(e){
   $.ajax({
   type: form.attr('method'),
   url: form.attr('action'),
-  data: form.serialize(),
+  data: JSON.stringify(data),
+  contentType: "application/json",
   success: function(){
     $('#success').append("<div class='alert alert-success'><strong>Submit Success!</strong> Please Wait for My Response.</div>")
     },
